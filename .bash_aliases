@@ -6,5 +6,6 @@ alias gf='git fetch'
 alias gw='git switch'
 alias gs='git status'
 alias ga='git add'
+alias gb='git branch'
 
 alias c='clear'
