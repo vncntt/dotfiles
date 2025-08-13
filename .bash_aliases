@@ -8,3 +8,4 @@ alias gs='git status'
 alias ga='git add'
 
 alias c='clear'
+alias p='python'
