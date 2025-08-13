@@ -1,0 +1,10 @@
+alias g='git'
+alias gc='git commit'
+alias gl='git pull'
+alias gu='git push'
+alias gf='git fetch'
+alias gw='git switch'
+alias gs='git status'
+alias ga='git add'
+
+alias c='clear'
