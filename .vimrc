@@ -1,0 +1,3 @@
+set relativenumber
+
+vnoremap \ "+y
