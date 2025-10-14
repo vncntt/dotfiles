@@ -8,3 +8,4 @@ mkdir -p ~/.config/fish
 ln -sf ~/dotfiles/config.fish ~/.config/fish/config.fish
 
 echo "dotfiles symlinked"
+echo "Run 'source ~/.bashrc' or start a new shell to load aliases"

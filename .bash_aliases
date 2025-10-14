@@ -9,4 +9,4 @@ alias ga='git add'
 alias gb='git branch'
 
 alias c='clear'
-alias p='python'
+alias p='python3'
