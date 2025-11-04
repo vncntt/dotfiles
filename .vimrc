@@ -1,3 +1,6 @@
 set relativenumber
 
-vnoremap \ "+y
+inoremap jk <Esc>
+
+" vnoremap \ "+y
+set clipboard=unnamed
