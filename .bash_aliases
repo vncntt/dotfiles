@@ -1,3 +1,5 @@
+export PATH="$HOME/dotfiles/bin:$PATH"
+
 alias g='git'
 alias gc='git commit'
 alias gl='git pull'
