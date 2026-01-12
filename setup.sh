@@ -7,6 +7,8 @@ DOTFILES_BIN_DIR="$DOTFILES_DIR/bin"
 # Symlink shell configuration files
 ln -sf "$DOTFILES_DIR/.bash_aliases" ~/.bash_aliases
 ln -sf "$DOTFILES_DIR/.vimrc" ~/.vimrc
+ln -sf "$DOTFILES_DIR/.mcp.json" ~/.mcp.json
+
 
 mkdir -p ~/.config/fish
 ln -sf "$DOTFILES_DIR/config.fish" ~/.config/fish/config.fish
