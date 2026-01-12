@@ -8,6 +8,7 @@
       "Bash(gh pr view:*)",
       "Bash(gh pr diff:*)",
       "Bash(gh pr checks:*)",
+      "Bash(gh pr list:*)",
       "Bash(gh repo view:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
@@ -44,11 +45,10 @@
   },
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
-    "ralph-wiggum@claude-plugins-official": true,
-    "linear@claude-plugins-official": true,
+    "linear@claude-plugins-official": false,
     "code-review@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "slack@claude-plugins-official": true,
-    "ralph-loop@claude-plugins-official": true
+    "playwright@claude-plugins-official": false,
+    "slack@claude-plugins-official": false,
+    "code-simplifier@claude-plugins-official": true
   }
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
 # setup.sh - Symlinks dotfiles and sets up development environment
 
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTFILES_BIN_DIR="$DOTFILES_DIR/bin"
 
 # Symlink shell configuration files
