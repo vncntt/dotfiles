@@ -32,8 +32,11 @@ if ! command -v node &>/dev/null; then
     done < <(find "$DOTFILES_DIR/.node/bin" -type f -executable)
 fi
 
+# Configure npm to use ~/.local for global packages (avoids permission issues)
+npm config set prefix ~/.local
+
 # Install Claude Code
-if ! command -v claude &> /dev/null; then
+if [[ ! -f "$HOME/.local/bin/claude" ]]; then
     npm install -g @anthropic-ai/claude-code
 fi
 

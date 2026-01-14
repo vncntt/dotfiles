@@ -1,4 +1,4 @@
-set -gx PATH ~/dotfiles/bin $PATH
+set -gx PATH ~/.local/bin ~/dotfiles/bin $PATH
 
 alias g='git'
 alias gc='git commit'
