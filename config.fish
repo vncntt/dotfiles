@@ -13,6 +13,7 @@ alias gb='git branch'
 alias p='python3'
 alias python='python3'
 alias c='clear'
+alias cdsp='claude --dangerously-skip-permissions'
 
 fish_vi_key_bindings
 bind -M insert -m default jk repaint-mode
