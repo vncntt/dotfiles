@@ -1,4 +1,5 @@
 set -gx PATH ~/.local/bin ~/dotfiles/bin $PATH
+set -gx AWS_PROFILE production
 
 alias g='git'
 alias gc='git commit'
