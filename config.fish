@@ -15,6 +15,9 @@ alias p='python3'
 alias python='python3'
 alias c='clear'
 alias cdsp='claude --dangerously-skip-permissions'
+alias dl='dvc pull'
+alias du='dvc push'
+alias dr='dvc repro'
 
 fish_vi_key_bindings
 bind -M insert -m default jk repaint-mode
