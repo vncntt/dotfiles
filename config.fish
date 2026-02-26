@@ -18,6 +18,7 @@ alias cdsp='claude --dangerously-skip-permissions'
 alias dl='dvc pull'
 alias du='dvc push'
 alias dr='dvc repro'
+alias ao='aws sso login'
 
 fish_vi_key_bindings
 bind -M insert -m default jk repaint-mode
