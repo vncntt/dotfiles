@@ -1,26 +1,9 @@
 {
   "cleanupPeriodDays": 99999,
-  "permissions": {
-    "allow": [
-      "Bash(gh issue list:*)",
-      "Bash(gh issue view:*)",
-      "Bash(uv run pytest:*)",
-      "Bash(gh pr view:*)",
-      "Bash(gh pr diff:*)",
-      "Bash(gh pr checks:*)",
-      "Bash(gh pr list:*)",
-      "Bash(gh repo view:*)",
-      "Bash(cat:*)",
-      "Bash(find:*)",
-      "Bash(grep:*)",
-      "Bash(ls:*)",
-      "Bash(wc:*)",
-      "WebSearch"
-    ],
-    "deny": [],
-    "ask": []
+  "env": {
+    "ENABLE_LSP_TOOL": "1"
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "hooks": {
     "PermissionRequest": [
       {
@@ -44,12 +27,29 @@
     ]
   },
   "enabledPlugins": {
-    "commit-commands@claude-plugins-official": true,
-    "linear@claude-plugins-official": false,
     "code-review@claude-plugins-official": true,
     "playwright@claude-plugins-official": false,
     "slack@claude-plugins-official": false,
     "code-simplifier@claude-plugins-official": true,
-    "warehouse-query@metr-eval-execution": true
-  }
+    "warehouse-query@metr-eval-execution": true,
+    "explore-transcript@metr-eval-execution": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "code-analysis@metr-claude-code": true,
+    "code-quality@metr-claude-code": true
+  },
+  "extraKnownMarketplaces": {
+    "metr-eval-execution": {
+      "source": {
+        "source": "github",
+        "repo": "METR/eval-execution-claude"
+      }
+    },
+    "metr-claude-code": {
+      "source": {
+        "source": "github",
+        "repo": "metr/claude-code"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true
 }
