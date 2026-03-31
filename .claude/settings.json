@@ -3,6 +3,7 @@
   "env": {
     "ENABLE_LSP_TOOL": "1"
   },
+  "showThinkingSummaries": true,
   "model": "opus[1m]",
   "hooks": {
     "PermissionRequest": [
@@ -35,7 +36,8 @@
     "explore-transcript@metr-eval-execution": true,
     "pyright-lsp@claude-plugins-official": true,
     "code-analysis@metr-claude-code": true,
-    "code-quality@metr-claude-code": true
+    "code-quality@metr-claude-code": true,
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "metr-eval-execution": {
@@ -51,5 +53,7 @@
       }
     }
   },
-  "skipDangerousModePermissionPrompt": true
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "fastMode": true
 }
