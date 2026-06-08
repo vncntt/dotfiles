@@ -17,6 +17,7 @@ fish -c "fish_add_path ~/.local/bin" 2>/dev/null || true
 PI_AGENT_DIR="$HOME/.pi/agent"
 mkdir -p "$PI_AGENT_DIR"
 ln -sf "$DOTFILES_DIR/.pi/agent/settings.json" "$PI_AGENT_DIR/settings.json"
+ln -sf "$DOTFILES_DIR/.pi/agent/keybindings.json" "$PI_AGENT_DIR/keybindings.json"
 
 # Install Claude Code
 if [[ ! -f "$HOME/.local/bin/claude" ]]; then
