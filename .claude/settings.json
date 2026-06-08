@@ -28,32 +28,7 @@
     ]
   },
   "enabledPlugins": {
-    "code-review@claude-plugins-official": true,
-    "playwright@claude-plugins-official": false,
-    "slack@claude-plugins-official": false,
-    "code-simplifier@claude-plugins-official": true,
-    "warehouse-query@metr-eval-execution": true,
-    "explore-transcript@metr-eval-execution": true,
-    "pyright-lsp@claude-plugins-official": true,
-    "code-analysis@metr-claude-code": true,
-    "code-quality@metr-claude-code": true,
     "superpowers@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": {
-    "metr-eval-execution": {
-      "source": {
-        "source": "github",
-        "repo": "METR/eval-execution-claude"
-      }
-    },
-    "metr-claude-code": {
-      "source": {
-        "source": "github",
-        "repo": "metr/claude-code"
-      }
-    }
-  },
-  "effortLevel": "high",
-  "skipDangerousModePermissionPrompt": true,
-  "fastMode": true
+  "effortLevel": "high"
 }

@@ -1,0 +1,19 @@
+# Ignore local/generated Pi state by default.
+*
+
+# Portable config worth keeping in dotfiles.
+!.gitignore
+!settings.json
+!AGENTS.md
+!SYSTEM.md
+!APPEND_SYSTEM.md
+!keybindings.json
+!models.json
+!prompts/
+!prompts/**
+!skills/
+!skills/**
+!extensions/
+!extensions/**
+!themes/
+!themes/**
