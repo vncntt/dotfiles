@@ -1,0 +1,76 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    // cmd-alt-c = copy image to clipboard: first copy the file PATH using
+    // Zed's built-in action (works for image tabs, where $ZED_FILE doesn't),
+    // then spawn a task whose script converts that clipboard path into the
+    // actual image bitmap. Helper keys exist only to be chained.
+    "context": "Pane",
+    "bindings": {
+      "cmd-alt-c": ["workspace::SendKeystrokes", "ctrl-alt-shift-f13 ctrl-alt-shift-f14"],
+      "ctrl-alt-shift-f13": "workspace::CopyPath",
+      "ctrl-alt-shift-f14": ["task::Spawn", { "task_name": "Copy current image" }],
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-alt-c": ["workspace::SendKeystrokes", "ctrl-alt-shift-f13 ctrl-alt-shift-f14"],
+      "ctrl-alt-shift-f13": "project_panel::CopyPath",
+      "ctrl-alt-shift-f14": ["task::Spawn", { "task_name": "Copy current image" }],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-z u +": "zed::IncreaseUiFontSize",
+      "ctrl-z u -": "zed::DecreaseUiFontSize",
+      "ctrl-z u 0": "zed::ResetUiFontSize",
+      "ctrl-z b +": "zed::IncreaseBufferFontSize",
+      "ctrl-z b -": "zed::DecreaseBufferFontSize",
+      "ctrl-z b 0": "zed::ResetBufferFontSize",
+      "cmd-0": ["workspace::SendKeystrokes", "ctrl-z u 0 ctrl-z b 0"],
+      "cmd-=": ["workspace::SendKeystrokes", "ctrl-z u + ctrl-z b +"],
+      "cmd-+": ["workspace::SendKeystrokes", "ctrl-z u + ctrl-z b +"],
+      "cmd--": ["workspace::SendKeystrokes", "ctrl-z u - ctrl-z b -"],
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal",
+      "cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-`": "terminal_panel::Toggle",
+    },
+  },
+]

@@ -1,0 +1,15 @@
+// Global Zed tasks. See https://zed.dev/docs/tasks
+[
+  {
+    "label": "Copy current image",
+    // No task variables on purpose: Zed can't resolve $ZED_FILE for image
+    // tabs, which makes the task silently unspawnable. The script instead
+    // reads the file path from the clipboard (put there by CopyPath, chained
+    // in keymap.json) and replaces it with the image bitmap.
+    "command": "fish $HOME/.config/zed/copy-image.fish",
+    "reveal": "never",
+    "hide": "on_success",
+    "show_summary": false,
+    "show_command": false
+  }
+]

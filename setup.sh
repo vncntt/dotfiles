@@ -13,6 +13,12 @@ mkdir -p ~/.config/fish
 ln -sf "$DOTFILES_DIR/config.fish" ~/.config/fish/config.fish
 fish -c "fish_add_path ~/.local/bin" 2>/dev/null || true
 
+# === Zed Setup ===
+mkdir -p ~/.config/zed
+ln -sf "$DOTFILES_DIR/zed/keymap.json" ~/.config/zed/keymap.json
+ln -sf "$DOTFILES_DIR/zed/tasks.json" ~/.config/zed/tasks.json
+ln -sf "$DOTFILES_DIR/zed/copy-image.fish" ~/.config/zed/copy-image.fish
+
 # === Pi Coding Agent Setup ===
 PI_AGENT_DIR="$HOME/.pi/agent"
 mkdir -p "$PI_AGENT_DIR"
