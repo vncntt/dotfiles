@@ -1,0 +1,150 @@
+:root {
+  --fg: #1a1d21;
+  --fg-muted: #6b7280;
+  --fg-faint: #9ca3af;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
+  --bg: #ffffff;
+  --bg-subtle: #f9fafb;
+  --bg-hover: #f3f4f6;
+  --accent: #2563eb;
+  --accent-bg: #eff6ff;
+  --researcher: #7c3aed;
+  --researcher-bg: #f5f3ff;
+  --coder: #0891b2;
+  --coder-bg: #ecfeff;
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --ok: #059669;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="search"] {
+  font: inherit;
+}
+
+/* markdown body styling */
+.md {
+  overflow-wrap: break-word;
+}
+.md > :first-child {
+  margin-top: 0;
+}
+.md > :last-child {
+  margin-bottom: 0;
+}
+.md h1,
+.md h2,
+.md h3,
+.md h4 {
+  margin: 1.2em 0 0.5em;
+  line-height: 1.3;
+}
+.md h1 {
+  font-size: 1.35em;
+}
+.md h2 {
+  font-size: 1.2em;
+}
+.md h3 {
+  font-size: 1.05em;
+}
+.md p {
+  margin: 0.55em 0;
+}
+.md ul,
+.md ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+.md li {
+  margin: 0.15em 0;
+}
+.md code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--bg-hover);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+.md pre {
+  margin: 0.6em 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+  background: var(--bg-subtle) !important;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.md pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+.md blockquote {
+  margin: 0.6em 0;
+  padding: 2px 12px;
+  border-left: 3px solid var(--border-strong);
+  color: var(--fg-muted);
+}
+.md table {
+  margin: 0.6em 0;
+  font-size: 13px;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.md th,
+.md td {
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  text-align: left;
+}
+.md th {
+  background: var(--bg-subtle);
+}
+.md img {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 6px 0;
+}
+.md hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.2em 0;
+}
