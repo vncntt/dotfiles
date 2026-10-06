@@ -1,4 +1,4 @@
-export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/dotfiles/bin:$PATH"
 
 alias g='git'
 alias gc='git commit'

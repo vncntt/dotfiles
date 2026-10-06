@@ -6,6 +6,7 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Symlink shell configuration files
 ln -sf "$DOTFILES_DIR/.bash_aliases" ~/.bash_aliases
 ln -sf "$DOTFILES_DIR/.vimrc" ~/.vimrc
+ln -sf "$DOTFILES_DIR/.tmux.conf" ~/.tmux.conf
 ln -sf "$DOTFILES_DIR/.mcp.json" ~/.mcp.json
 
 
@@ -44,3 +45,10 @@ chmod +x "$CLAUDE_DIR/hooks/"*
 echo "dotfiles symlinked"
 echo "Claude Code setup complete. Run 'claude login' to authenticate."
 echo "Run 'source ~/.bashrc' or start a new shell to load aliases"
+
+# === Default Shell ===
+FISH_PATH="$(command -v fish)"
+if [[ -n "$FISH_PATH" && "$SHELL" != "$FISH_PATH" ]]; then
+    grep -qxF "$FISH_PATH" /etc/shells || echo "$FISH_PATH" | sudo tee -a /etc/shells
+    chsh -s "$FISH_PATH"
+fi
